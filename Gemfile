@@ -15,4 +15,6 @@ gem 'pygments.rb', '2.4.1'
 gem 'thread_safe', '0.3.6'
 gem 'epubcheck-ruby', '5.2.0.0'
 gem 'html-proofer', '5.0.9'
-gem 'kindlegen', '3.1.1'
+group :mobi, optional: true do
+  gem 'kindlegen', '3.1.1'
+end

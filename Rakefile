@@ -64,7 +64,7 @@ namespace :book do
       check_contrib()
 
       puts 'Converting to HTML...'
-      sh "bundle exec asciidoctor #{params} -a data-uri progit.asc"
+      sh "asciidoctor #{params} -a data-uri progit.asc"
       puts ' -- HTML output at progit.html'
 
   end
@@ -74,7 +74,7 @@ namespace :book do
       check_contrib()
 
       puts 'Converting to EPub...'
-      sh "bundle exec asciidoctor-epub3 #{params} progit.asc"
+      sh "asciidoctor-epub3 #{params} progit.asc"
       puts ' -- Epub output at progit.epub'
 
   end
@@ -84,7 +84,7 @@ namespace :book do
       check_contrib()
 
       puts 'Converting to FB2...'
-      sh "bundle exec asciidoctor-fb2 #{params} progit.asc"
+      sh "asciidoctor-fb2 #{params} progit.asc"
       puts ' -- FB2 output at progit.fb2.zip'
 
   end
@@ -94,7 +94,7 @@ namespace :book do
       check_contrib()
 
       puts "Converting to Mobi (kf8)..."
-      sh "bundle exec asciidoctor-epub3 #{params} -a ebook-format=kf8 progit.asc"
+      sh "asciidoctor-epub3 #{params} -a ebook-format=kf8 progit.asc"
       puts " -- Mobi output at progit.mobi"
   end
 
@@ -103,7 +103,7 @@ namespace :book do
       check_contrib()
 
       puts 'Converting to PDF... (this one takes a while)'
-      sh "bundle exec asciidoctor-pdf #{params} progit.asc 2>/dev/null"
+      sh "asciidoctor-pdf #{params} progit.asc 2>/dev/null"
       puts ' -- PDF output at progit.pdf'
   end
 
