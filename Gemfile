@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rake', '13.2.1'
+gem 'bigdecimal'
+gem 'ostruct'
 gem 'asciidoctor', '2.0.22'
 
 gem 'json', '2.9.1'
