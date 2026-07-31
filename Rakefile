@@ -55,8 +55,15 @@ namespace :book do
   desc 'generate contributors list'
   file 'book/contributors.txt' do
       puts 'Generating contributors list'
-      sh "echo 'Contributors as of #{header_hash}:\n' > book/contributors.txt"
-      sh "git shortlog -s HEAD | grep -v -E '(Straub|Chacon|dependabot)' | cut -f 2- | sort | column -c 120 >> book/contributors.txt"
+      contributors = `git shortlog -s HEAD`.lines
+        .map { |line| line.sub(/^\s*\d+\s+/, '').strip }
+        .reject { |name| name.empty? || name.match?(/Straub|Chacon|dependabot/i) }
+        .sort
+
+      File.open('book/contributors.txt', 'w') do |file|
+        file.puts "Contributors as of #{header_hash}:\n"
+        contributors.each { |name| file.puts name }
+      end
   end
 
   desc 'build HTML format'
