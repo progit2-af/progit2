@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rake', '13.2.1'
 gem 'bigdecimal'
 gem 'ostruct'
-gem 'asciidoctor', '2.0.22'
+gem 'asciidoctor', '2.0.26'
 
 gem 'json', '2.9.1'
 gem 'awesome_print', '1.9.2'
