@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rake', '13.2.1'
+gem 'rake', '13.4.2'
 gem 'bigdecimal'
 gem 'ostruct'
 gem 'asciidoctor', '2.0.22'
