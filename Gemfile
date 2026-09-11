@@ -5,7 +5,7 @@ gem 'bigdecimal'
 gem 'ostruct'
 gem 'asciidoctor', '2.0.22'
 
-gem 'json', '2.21.2'
+gem 'json', '3.0.1'
 gem 'awesome_print', '1.9.2'
 
 gem 'asciidoctor-fb2', '0.7.0'
